@@ -14,16 +14,16 @@
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, new { required = "required" })
   <br>
-  @Html.LabelFor(model => model.PhoneNumber)
+  @Html.Label("Phone Number")
   @Html.TextBoxFor(model => model.PhoneNumber)
   <br>
-  @Html.LabelFor(model => model.EmailAddress)
-  @Html.TextBoxFor(model => model.EmailAddress)
+  @Html.Label("Email Address")
+  @Html.TextBoxFor(model => model.EmailAddress, new { type="email" })
   <br>
   @Html.LabelFor(model => model.Stylist)
   @Html.DropDownList("StylistId")
   <br>
-  <input type="submit" value="Add new client" />
+  <input type="submit" value="Add New Client" />
 }
 
 <p>@Html.ActionLink("Show All Clients", "Index")</p>
