@@ -8,6 +8,7 @@
 <h2>Stylist Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
+<h3>Phone Number: @ViewBag.FormattedPhoneNum</h3>
 
 @if (@Model.Clients.Count == 0)
 {
@@ -24,5 +25,6 @@ else
   </ul>
 }
 
+<p>@Html.ActionLink("Add New Client", "Create", "Clients")</p>
 <p>@Html.ActionLink("Show All Stylists", "Index")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>

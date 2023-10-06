@@ -39,6 +39,10 @@ namespace HairSalon.Controllers
       Stylist thisStylist = _db.Stylists
                                 .Include(stylists => stylists.Clients)
                                 .FirstOrDefault(stylists => stylists.StylistId == id);
+      string areaCode = thisStylist.PhoneNumber.Substring(0, 3);
+      string telPrefix = thisStylist.PhoneNumber.Substring(3, 3);
+      string lineNum = thisStylist.PhoneNumber.Substring(6);
+      ViewBag.FormattedPhoneNum = $"({areaCode}) {telPrefix}-{lineNum}";
       return View(thisStylist);
     }
   }
