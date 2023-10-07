@@ -2,7 +2,7 @@
 
 #### By Richard Barbour II
 
-#### C# ASP.NET Core MVC web application that tracks stylists and their clients.
+#### C# ASP.NET Core MVC web application that tracks stylists and their clients using MySQL database.
 
 ## Technologies Used
 
