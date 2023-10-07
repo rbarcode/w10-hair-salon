@@ -7,6 +7,7 @@
 ## Technologies Used
 
 * C#
+* HTML
 * .Net 6.0 SDK (incl. NuGet)
 * ASP.NET Core MVC
 * MySQL 8.0.34
@@ -23,8 +24,8 @@ The web app uses the Entity Framework Core library for object relational mapping
 
 1. Click on the green “<> Code” on the far right-hand side of the page's main column.
 2. On the “Local” tab of the mini-window that opens underneath the “<>Code” button, copy the HTTPS link in the gray bar to your clipboard.
-3. In GitBash (or a terminal shell of your choice), navigate to the directory where you wish to download the project and enter the following prompt (replacing the italicized word with the appropriate link): git clone *url-of-the-repository-copied-in-the-previous-step*
-4. Your chosen directory will now contain a folder titled w10-hair-salon.
+3. In GitBash (or a terminal shell of your choice), navigate to the directory where you wish to download the project and enter the following prompt (replacing the asterisked word with the appropriate link): `git clone *url-of-the-repository-copied-in-the-previous-step*`
+4. Your chosen directory will now contain a folder titled "w10-hair-salon".
 5. If you don't have the .Net Software Development Kit already installed on your computer, do so now. You may also wish to download the REPL (read-evaluate-print-loop) tool called dotnet-script. You can install the relevant tools introduced in [this series of lessons on LearnHowToProgram.com](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c).
 6. If you skipped the previous step and/or don't have MySQL and MySQL Workbench installed, follow the instructions in the LearnHowToProgram.com lesson ["Creating a Test Database: Exporting and Importing Databases with MySQL Workbench"](https://www.learnhowtoprogram.com/c-and-net/database-basics/creating-a-test-database-exporting-and-importing-databases-with-mysql-workbench) to use the `richard_barbour.sql` file located at the top level of this repo (i.e. in the "w10-hair-salon" folder) to create a new database in MySQL Workbench with the same name.
 7. Navigate into the production directory "HairSalon" and create a new file called `appsettings.json`.
