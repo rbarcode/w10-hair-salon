@@ -34,7 +34,7 @@ The web app uses the Entity Framework Core library for object relational mapping
 ```json
 {
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=richard_barbour.sql;uid=[YOUR_USERNAME];pwd=[YOUR_PASSWORD];"
+      "DefaultConnection": "Server=localhost;Port=3306;database=richard_barbour;uid=[YOUR_USERNAME];pwd=[YOUR_PASSWORD];"
   }
 }
 ```
