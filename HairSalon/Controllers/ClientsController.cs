@@ -53,10 +53,18 @@ namespace HairSalon.Controllers
       }
       else
       {
-        string areaCode = thisClient.PhoneNumber.Substring(0, 3);
+        string areaCode = thisClient.PhoneNumber[..3];
         string telPrefix = thisClient.PhoneNumber.Substring(3, 3);
-        string lineNum = thisClient.PhoneNumber.Substring(6);
+        string lineNum = thisClient.PhoneNumber[6..];
         ViewBag.FormattedPhoneNum = $"({areaCode}) {telPrefix}-{lineNum}";
+      }
+      if (thisClient.EmailAddress == null)
+      {
+        ViewBag.EmailAddress = "No address on file";
+      }
+      else
+      {
+        ViewBag.EmailAddress = thisClient.EmailAddress;
       }
       return View(thisClient);
     }

@@ -45,9 +45,9 @@ namespace HairSalon.Controllers
       }
       else
       {
-        string areaCode = thisStylist.PhoneNumber.Substring(0, 3);
+        string areaCode = thisStylist.PhoneNumber[..3];
         string telPrefix = thisStylist.PhoneNumber.Substring(3, 3);
-        string lineNum = thisStylist.PhoneNumber.Substring(6);
+        string lineNum = thisStylist.PhoneNumber[6..];
         ViewBag.FormattedPhoneNum = $"({areaCode}) {telPrefix}-{lineNum}";
       }
       return View(thisStylist);
