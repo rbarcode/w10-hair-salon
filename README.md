@@ -26,10 +26,11 @@ The web app uses the Entity Framework Core library for object relational mapping
 2. On the “Local” tab of the mini-window that opens underneath the “<>Code” button, copy the HTTPS link in the gray bar to your clipboard.
 3. In GitBash (or a terminal shell of your choice), navigate to the directory where you wish to download the project and enter the following prompt (replacing the asterisked word with the appropriate link): `git clone *url-of-the-repository-copied-in-the-previous-step*`
 4. Your chosen directory will now contain a folder titled "w10-hair-salon".
-5. If you don't have the .Net Software Development Kit already installed on your computer, do so now. You may also wish to download the REPL (read-evaluate-print-loop) tool called dotnet-script. You can install the relevant tools introduced in [this series of lessons on LearnHowToProgram.com](https://www.learnhowtoprogram.com/c-and-net/getting-started-with-c).
-6. If you skipped the previous step and/or don't have MySQL and MySQL Workbench installed, follow the instructions in the LearnHowToProgram.com lesson ["Creating a Test Database: Exporting and Importing Databases with MySQL Workbench"](https://www.learnhowtoprogram.com/c-and-net/database-basics/creating-a-test-database-exporting-and-importing-databases-with-mysql-workbench) to use the `richard_barbour.sql` file located at the top level of this repo (i.e. in the "w10-hair-salon" folder) to create a new database in MySQL Workbench with the same name.
-7. Navigate into the production directory "HairSalon" and create a new file called `appsettings.json`.
-8. Within `appsettings.json`, put in the following code, replacing the `uid` and `pwd` values (i.e. "[YOUR_USERNAME]" and "[YOUR_PASSWORD]") with your own username and password for MySQL. 
+5. If you don't have the .Net Software Development Kit already installed on your computer, do so now. You may also wish to download the REPL (read-evaluate-print-loop) tool called dotnet-script. You can install the relevant tools introduced in [this series of lessons on LearnHowToProgram.com](https://old.learnhowtoprogram.com/c-and-net/getting-started-with-c).
+6. If you skipped the previous step and/or don't have MySQL and MySQL Workbench installed, follow the instructions in the LearnHowToProgram.com lesson ["Creating a Test Database: Exporting and Importing Databases with MySQL Workbench"](https://full-time.learnhowtoprogram.com/c-and-net/database-basics/creating-a-test-database-exporting-and-importing-databases-with-mysql-workbench) to use the `richard_barbour.sql` file located at the top level of this repo (i.e. in the "w10-hair-salon" folder) to create a new database in MySQL Workbench with the same name.
+7. Next you'll need to import the database included in the project. Open MySQL Workbench and navigate to the *Administration* tab of the *Navigator* window, then select *Data Import / Restore* in the *Management* section. In the import options field of the *Import from Disk* tab that opens, select *Import from Self-Contained File*. Navigate to the `richard_barbour.sql` file in the "w10-hair-salon" folder in the input field for *Import from Self-Contained File* and under the *Default Schema to be Imported To*, select the *New* button. Enter the name of the file as is (i.e. richard_barbour) in the popup dialogue box and click OK. Navigate to the tab called *Import Progress* and click *Start Import* at the bottom right corner of the window. If you reopen the *Schemas* tab in the *Navigator* window and click the refresh icon in the upper right hand corner, the imported database should appear.
+8. Navigate into the production directory "HairSalon" and create a new file called `appsettings.json`.
+9. Within `appsettings.json`, put in the following code, replacing the `uid` and `pwd` values (i.e. "[YOUR_USERNAME]" and "[YOUR_PASSWORD]") with your own username and password for MySQL. 
 
 ```json
 {
@@ -39,8 +40,8 @@ The web app uses the Entity Framework Core library for object relational mapping
 }
 ```
 
-9. To build and run the web app on your local server, navigate to the HairSalon directory. In the command line of your terminal, enter the following command to compile and execute the application in a web browser with a watcher: `dotnet watch`. 
-10. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, review this lesson: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/c-and-net/basic-web-applications/redirecting-to-https-and-issuing-a-security-certificate).
+10. To build and run the web app on your local server, navigate to the HairSalon directory. In the command line of your terminal, enter the following command to compile and execute the application in a web browser with a watcher: `dotnet watch`. 
+11. If you cannot access localhost:5001 it is likely because you have not configured a .NET developer security certificate for HTTPS. To learn about this, review this lesson: [Redirecting to HTTPS and Issuing a Security Certificate](https://www.learnhowtoprogram.com/c-and-net/basic-web-applications/redirecting-to-https-and-issuing-a-security-certificate).
 
 ## Known Bugs
 
